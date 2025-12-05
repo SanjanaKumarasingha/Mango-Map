@@ -7,7 +7,7 @@ const {
   getNormalUsers,
   updateNormalUserProfile,
 } = require('../services/normalUserTable');
-const { uploadFileToBlob } = require('../util/azurePhotoUpload');
+// const { uploadFileToBlob } = require('../util/azurePhotoUpload');
 const { getPaginationParameters } = require('../util/pagination');
 const { validateNormalUser } = require('../validations/normaluser.validation');
 
@@ -74,23 +74,23 @@ async function deleteNormalUser(req, res) {
   }
 }
 
-async function updateNormalUserImage(req, res) {
-  const id = req.user.id;
-  const normalUser = await NormalUser.findByPk(id);
+// async function updateNormalUserImage(req, res) {
+//   const id = req.user.id;
+//   const normalUser = await NormalUser.findByPk(id);
 
-  if (!normalUser) {
-    return res.status(404).json({ error: 'Normal user not found' });
-  }
+//   if (!normalUser) {
+//     return res.status(404).json({ error: 'Normal user not found' });
+//   }
 
-  if (!req.file) {
-    throw new APIError('No file uploaded', 400);
-  }
+//   if (!req.file) {
+//     throw new APIError('No file uploaded', 400);
+//   }
 
-  const profileImageUrl = await uploadFileToBlob(req.file);
-  // update the normal user profile
-  const result = await updateNormalUserProfileImage(id, profileImageUrl);
-  return res.json({ imageUrl: profileImageUrl });
-}
+//   const profileImageUrl = await uploadFileToBlob(req.file);
+//   // update the normal user profile
+//   const result = await updateNormalUserProfileImage(id, profileImageUrl);
+//   return res.json({ imageUrl: profileImageUrl });
+// }
 
 async function updateNormalUserProfileHandler(req, res) {
   // first validate the request body
@@ -109,6 +109,6 @@ module.exports = {
   getNormalUserDetails,
   getNormalUserProfiles,
   deleteNormalUser,
-  updateNormalUserImage,
+  // updateNormalUserImage,
   updateNormalUserProfileHandler,
 };

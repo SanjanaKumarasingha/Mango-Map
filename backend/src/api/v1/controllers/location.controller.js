@@ -1,6 +1,6 @@
 const { LocationBasedImage } = require('../models');
 const { LocationBasedImageLike } = require('../models');
-const { uploadFileToBlob } = require('../util/azurePhotoUpload');
+// const { uploadFileToBlob } = require('../util/azurePhotoUpload');
 const { getLocation } = require('../services/locationTable');
 
 async function LocationHandler(req, res) {
@@ -28,24 +28,25 @@ async function getimages(req, res) {
   }
 }
 
-//have to check
-async function uploadimages(req, res) {
-  console.log(req.body);
-  try {
-    const { location_id, user_id, review } = req.body;
-    console.log(location_id);
-    const url = await uploadFileToBlob(req.file);
-    const image = await LocationBasedImage.create({
-      photo: url,
-      location_id: location_id,
-      user_id: user_id,
-      review: review,
-    });
-    res.status(201).json(image);
-  } catch (error) {
-    res.status(500).json({ error: error.message });
-  }
-}
+// //have to check
+// async function uploadimages(req, res) {
+//   console.log('Upload images function called');
+//   console.log(req.body);
+//   try {
+//     const { location_id, user_id, review } = req.body;
+//     console.log(location_id);
+//     const url = await uploadFileToBlob(req.file);
+//     const image = await LocationBasedImage.create({
+//       photo: url,
+//       location_id: location_id,
+//       user_id: user_id,
+//       review: review,
+//     });
+//     res.status(201).json(image);
+//   } catch (error) {
+//     res.status(500).json({ error: error.message });
+//   }
+// }
 
 async function getTrendingImages(req, res) {
   try {
@@ -137,7 +138,7 @@ async function unlikeimage(req, res) {
 
 module.exports = {
   LocationHandler,
-  uploadimages,
+  // uploadimages,
   getimages,
   getTrendingImages,
   getimage,

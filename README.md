@@ -1,9 +1,9 @@
 # MangoMap
 
 ## UI Design
+
 ![alt text](MangoMap.jpg)
 <a href="https://www.figma.com/design/mW5OVHHLBetbjiNTLQZSQg/Mango-Map?node-id%3D0-1%26t%3Dghob4WadViaIgTDw-1" target="_blank" rel="noopener noreferrer">Figma Design</a>
-
 
 ## Frontend
 
@@ -23,6 +23,7 @@ Welcome to **MangoMap**, our mobile app built using Flutter! MangoMap is designe
 Our backend is developed using Node.js, a powerful and efficient runtime environment that allows us to build scalable and high-performance applications. Node.js uses an event-driven, non-blocking I/O model, making it ideal for real-time applications like MangoMap.
 
 # ER Diagram
+
 ![alt text](image.png)
 
 ### Features
@@ -36,9 +37,9 @@ Our backend is developed using Node.js, a powerful and efficient runtime environ
 
 We are proud to acknowledge our dedicated team:
 
+- **Sanjana Kumarasinghe**
 - **Sajith Anuradha**
 - **Shavin Anjitha**
-- **Sanjana Kumarasinghe**
 - **Vinu Kaveesha**
 - **Verosha Kriyanjala**
 - **Tharusha Dinujaya**

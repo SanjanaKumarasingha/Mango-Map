@@ -3,7 +3,7 @@ const multer = require('multer');
 const {
   getNormalUserDetails,
   deleteNormalUser,
-  updateNormalUserImage,
+  // updateNormalUserImage,
   getNormalUserProfiles,
   updateNormalUserProfileHandler,
 } = require('../controllers/profile.controller');
@@ -15,12 +15,12 @@ const fileUpload = multer();
 router.get('/:id', getNormalUserDetails);
 router.get('/', getNormalUserProfiles);
 router.delete('/', authorize, deleteNormalUser);
-router.put(
-  '/image',
-  authorize,
-  fileUpload.single('file'),
-  updateNormalUserImage
-);
+// router.put(
+//   '/image',
+//   authorize,
+//   fileUpload.single('file'),
+//   updateNormalUserImage
+// );
 router.put('/', authorize, updateNormalUserProfileHandler);
 
 module.exports = router;
