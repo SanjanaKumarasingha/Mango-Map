@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "487296189240",
+    "project_id": "lanka-explore",
+    "storage_bucket": "lanka-explore.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:487296189240:android:b2b3cb37de038f194077cd",
+        "android_client_info": {
+          "package_name": "com.sanjana.lankaexplore"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDiCs1Mt3OiekFcm1HHGTelPIq2UHwLxlI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
